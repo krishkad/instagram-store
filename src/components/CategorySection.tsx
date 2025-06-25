@@ -1,10 +1,10 @@
 "use client";
 
 
-import { useState, useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 const CategorySection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const categories = [
@@ -35,15 +35,15 @@ const CategorySection = () => {
     }
   ];
 
-  const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = 300;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth'
-      });
-    }
-  };
+  // const scroll = (direction: 'left' | 'right') => {
+  //   if (scrollRef.current) {
+  //     const scrollAmount = 300;
+  //     scrollRef.current.scrollBy({
+  //       left: direction === 'left' ? -scrollAmount : scrollAmount,
+  //       behavior: 'smooth'
+  //     });
+  //   }
+  // };
 
   return (
     <section id="categories" className="py-20 bg-white">
@@ -116,7 +116,7 @@ const CategorySection = () => {
               <div
                 key={index}
                 className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-gold' : 'bg-truffle/30'
+                  index === 1 ? 'bg-gold' : 'bg-truffle/30'
                 }`}
               />
             ))}

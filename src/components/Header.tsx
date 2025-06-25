@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
-import { Search, ShoppingCart, Instagram, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useRouter } from "next/navigation";
+import { Search, ShoppingCart, User } from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

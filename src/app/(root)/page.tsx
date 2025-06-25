@@ -1,14 +1,11 @@
 
-import Header from '@/components/Header';
-import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
-import FeaturedProducts from '@/components/FeaturedProducts';
 import CategorySection from '@/components/CategorySection';
-import ReviewsSection from '@/components/ReviewsSection';
+import FeaturedProducts from '@/components/FeaturedProducts';
+import HeroSection from '@/components/HeroSection';
 import InstagramFeed from '@/components/InstagramFeed';
 import OnboardingSection from '@/components/OnboardingSection';
-import Footer from '@/components/Footer';
-import MobileBottomBar from '@/components/MobileBottomBar';
+import ReviewsSection from '@/components/ReviewsSection';
 
 const Home = () => {
   return (

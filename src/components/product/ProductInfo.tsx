@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/select";
 
 interface ProductInfoProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   product: any;
   selectedSize: string;
   setSelectedSize: (size: string) => void;
@@ -92,7 +93,10 @@ const ProductInfo = ({
       <div className="space-y-3">
         <label className="text-sm font-medium text-charcoal">Color</label>
         <div className="flex gap-3">
-          {product.colors.map((color: any) => (
+          
+          {
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          product.colors.map((color: any) => (
             <button
               key={color.name}
               onClick={() => setSelectedColor(color.name)}
