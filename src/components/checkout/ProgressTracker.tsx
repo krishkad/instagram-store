@@ -56,6 +56,9 @@ const ProgressTracker = ({ currentStep }: ProgressTrackerProps) => {
           ))}
         </div>
       </div>
+
+
+      {/* name */}
     </div>
   );
 };
