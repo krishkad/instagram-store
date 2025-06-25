@@ -13,7 +13,7 @@ import MobileBottomBar from '@/components/MobileBottomBar';
 const Home = () => {
   return (
     <div className="min-h-screen bg-cream">
-      <Header />
+      {/* <Header /> */}
       <main>
         <HeroSection />
         <AboutSection />
@@ -23,8 +23,8 @@ const Home = () => {
         <ReviewsSection />
         <InstagramFeed />
       </main>
-      <Footer />
-      <MobileBottomBar />
+      {/* <Footer /> */}
+     
     </div>
   );
 };
