@@ -1,52 +1,57 @@
-"use client"
-import React, { useState } from 'react';
-import { Minus, Plus, Trash2, ArrowLeft, ShoppingBag } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent } from '@/components/ui/card';
-import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+"use client";
+import React, { useState } from "react";
+import { Minus, Plus, Trash2, ArrowLeft, ShoppingBag } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Card, CardContent } from "@/components/ui/card";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const CartPage = () => {
-//   const navigate = useNavigate();
-  const rouer = useRouter()
-  const [promoCode, setPromoCode] = useState('');
+  //   const navigate = useNavigate();
+  const rouer = useRouter();
+  const [promoCode, setPromoCode] = useState("");
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: 'Silk Maxi Dress',
-      image: '/placeholder.svg',
-      size: 'M',
-      color: 'Cream',
+      name: "Silk Maxi Dress",
+      image: "/placeholder.svg",
+      size: "M",
+      color: "Cream",
       price: 2999,
-      quantity: 1
+      quantity: 1,
     },
     {
       id: 2,
-      name: 'Golden Hoop Earrings',
-      image: '/placeholder.svg',
-      size: 'One Size',
-      color: 'Gold',
+      name: "Golden Hoop Earrings",
+      image: "/placeholder.svg",
+      size: "One Size",
+      color: "Gold",
       price: 1299,
-      quantity: 2
-    }
+      quantity: 2,
+    },
   ]);
 
   const updateQuantity = (id: number, newQuantity: number) => {
     if (newQuantity === 0) {
-      setCartItems(cartItems.filter(item => item.id !== id));
+      setCartItems(cartItems.filter((item) => item.id !== id));
     } else {
-      setCartItems(cartItems.map(item => 
-        item.id === id ? { ...item, quantity: newQuantity } : item
-      ));
+      setCartItems(
+        cartItems.map((item) =>
+          item.id === id ? { ...item, quantity: newQuantity } : item
+        )
+      );
     }
   };
 
   const removeItem = (id: number) => {
-    setCartItems(cartItems.filter(item => item.id !== id));
+    setCartItems(cartItems.filter((item) => item.id !== id));
   };
 
-  const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+  const subtotal = cartItems.reduce(
+    (sum, item) => sum + item.price * item.quantity,
+    0
+  );
   const shippingFee = subtotal >= 1000 ? 0 : 99;
   const total = subtotal + shippingFee;
 
@@ -56,8 +61,12 @@ const CartPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center py-16">
             <ShoppingBag className="mx-auto h-16 w-16 text-truffle mb-4" />
-            <h2 className="text-2xl font-serif text-charcoal mb-4">Your cart is empty</h2>
-            <p className="text-truffle mb-8">Discover our beautiful collection and add some items to your cart.</p>
+            <h2 className="text-2xl font-serif text-charcoal mb-4">
+              Your cart is empty
+            </h2>
+            <p className="text-truffle mb-8">
+              Discover our beautiful collection and add some items to your cart.
+            </p>
             <Link href="/">
               <Button className="bg-charcoal text-cream hover:bg-charcoal/90">
                 Continue Shopping
@@ -98,7 +107,9 @@ const CartPage = () => {
                       className="w-20 h-20 object-cover rounded-lg"
                     />
                     <div className="flex-1">
-                      <h3 className="font-medium text-charcoal mb-1">{item.name}</h3>
+                      <h3 className="font-medium text-charcoal mb-1">
+                        {item.name}
+                      </h3>
                       <div className="text-sm text-truffle mb-2">
                         {item.size} • {item.color}
                       </div>
@@ -108,22 +119,30 @@ const CartPage = () => {
                             variant="outline"
                             size="icon"
                             className="h-8 w-8"
-                            onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                            onClick={() =>
+                              updateQuantity(item.id, item.quantity - 1)
+                            }
                           >
                             <Minus className="h-3 w-3" />
                           </Button>
-                          <span className="w-8 text-center">{item.quantity}</span>
+                          <span className="w-8 text-center">
+                            {item.quantity}
+                          </span>
                           <Button
                             variant="outline"
                             size="icon"
                             className="h-8 w-8"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                            onClick={() =>
+                              updateQuantity(item.id, item.quantity + 1)
+                            }
                           >
                             <Plus className="h-3 w-3" />
                           </Button>
                         </div>
                         <div className="flex items-center gap-4">
-                          <span className="font-medium text-charcoal">₹{item.price * item.quantity}</span>
+                          <span className="font-medium text-charcoal">
+                            ₹{item.price * item.quantity}
+                          </span>
                           <Button
                             variant="ghost"
                             size="icon"
@@ -151,7 +170,9 @@ const CartPage = () => {
                     onChange={(e) => setPromoCode(e.target.value)}
                     className="flex-1"
                   />
-                  <Button variant="outline" className="shrink-0">Apply</Button>
+                  <Button variant="outline" className="shrink-0">
+                    Apply
+                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -161,8 +182,10 @@ const CartPage = () => {
           <div className="lg:col-span-1">
             <Card className="border-0 shadow-sm sticky top-24">
               <CardContent className="p-6">
-                <h3 className="font-serif text-xl text-charcoal mb-4">Order Summary</h3>
-                
+                <h3 className="font-serif text-xl text-charcoal mb-4">
+                  Order Summary
+                </h3>
+
                 <div className="space-y-3 mb-4">
                   <div className="flex justify-between">
                     <span className="text-truffle">Subtotal</span>
@@ -171,11 +194,13 @@ const CartPage = () => {
                   <div className="flex justify-between">
                     <span className="text-truffle">Shipping</span>
                     <span className="text-charcoal">
-                      {shippingFee === 0 ? 'Free' : `₹${shippingFee}`}
+                      {shippingFee === 0 ? "Free" : `₹${shippingFee}`}
                     </span>
                   </div>
                   {subtotal < 1000 && (
-                    <p className="text-xs text-truffle">Free shipping on orders above ₹1000</p>
+                    <p className="text-xs text-truffle">
+                      Free shipping on orders above ₹1000
+                    </p>
                   )}
                 </div>
 

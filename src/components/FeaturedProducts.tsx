@@ -10,56 +10,51 @@ const FeaturedProducts = () => {
   const [hoveredProduct, setHoveredProduct] = useState<number | null>(null);
   const router = useRouter();
 
-  const products = [
-    {
-      id: 1,
-      name: "Silk Camisole",
-      price: "$89",
-      image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=600&fit=crop",
-      category: "Tops",
-    },
-    {
-      id: 2,
-      name: "Cashmere Throw",
-      price: "$156",
-      image:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=500&h=600&fit=crop",
-      category: "Home",
-    },
-    {
-      id: 3,
-      name: "Gold Statement Ring",
-      price: "$45",
-      image:
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=600&fit=crop",
-      category: "Jewelry",
-    },
-    {
-      id: 4,
-      name: "Vintage Leather Bag",
-      price: "$234",
-      image:
-        "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=500&h=600&fit=crop",
-      category: "Accessories",
-    },
-    {
-      id: 5,
-      name: "Merino Wool Sweater",
-      price: "$128",
-      image:
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=500&h=600&fit=crop",
-      category: "Knitwear",
-    },
-    {
-      id: 6,
-      name: "Artisan Ceramic Vase",
-      price: "$67",
-      image:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=500&h=600&fit=crop",
-      category: "Home",
-    },
-  ];
+const products = [
+  {
+    id: 1,
+    name: "Classic White Sneakers",
+    price: "$75",
+    image: "https://images.unsplash.com/photo-1633344205710-4e6773b473ca?q=80&w=436&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Shoes",
+  },
+  {
+    id: 2,
+    name: "Brown Leather Oxfords",
+    price: "$120",
+    image: "https://images.unsplash.com/photo-1555436171-771b73dbab62?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Shoes",
+  },
+  {
+    id: 3,
+    name: "Blue Slim Jeans",
+    price: "$65",
+    image: "https://images.unsplash.com/photo-1686518528774-31014e028eb3?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Jeans",
+  },
+  {
+    id: 4,
+    name: "Black Skinny Jeans",
+    price: "$70",
+    image: "https://images.unsplash.com/photo-1745450071522-97e3687fef4a?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Jeans",
+  },
+  {
+    id: 5,
+    name: "Denim Trucker Jacket",
+    price: "$110",
+    image: "https://images.unsplash.com/photo-1612485947666-f656fe7fce32?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Jackets",
+  },
+  {
+    id: 6,
+    name: "Olive Bomber Jacket",
+    price: "$130",
+    image: "https://images.unsplash.com/photo-1594587640199-90ad1cb30c8c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    category: "Jackets",
+  },
+];
+
 
   return (
     <section id="featured-products" className="py-20 bg-cream">

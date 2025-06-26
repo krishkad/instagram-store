@@ -11,103 +11,81 @@ const ShopPage = () => {
 
   const categories = [
     "All",
-    "Dresses",
-    "Tops",
-    "Accessories",
-    "Jewelry",
-    "Home",
-    "Knitwear",
-    "Beauty",
+    "Shoes",
+    "Jeans",
+    "Jackets",
+    // "Jewelry",
+    // "Home",
+    // "Knitwear",
+    // "Beauty",
   ];
 
   const allProducts = [
     {
       id: 1,
-      name: "Silk Camisole",
-      price: 89,
+      name: "Classic White Sneakers",
+      price: 75,
       image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=600&fit=crop",
-      category: "Tops",
-      tags: ["New", "Best Seller"],
+        "https://images.unsplash.com/photo-1633344205710-4e6773b473ca?q=80&w=436&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "Shoes",
+      tags: ["New", "Everyday"],
       hoverImage:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=600&fit=crop&sat=-20",
+        "https://images.unsplash.com/photo-1633344205710-4e6773b473ca?q=80&w=436&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 2,
-      name: "Cashmere Throw",
-      price: 156,
+      name: "Brown Leather Oxfords",
+      price: 120,
       image:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=500&h=600&fit=crop",
-      category: "Home",
-      tags: ["Limited Edition"],
+        "https://images.unsplash.com/photo-1555436171-771b73dbab62?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "Shoes",
+      tags: ["Best Seller"],
       hoverImage:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=500&h=600&fit=crop&brightness=110",
+        "https://images.unsplash.com/photo-1555436171-771b73dbab62?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 3,
-      name: "Gold Statement Ring",
-      price: 45,
+      name: "Blue Slim Jeans",
+      price: 65,
       image:
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=600&fit=crop",
-      category: "Jewelry",
+        "https://images.unsplash.com/photo-1686518528774-31014e028eb3?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "Jeans",
       tags: ["New"],
       hoverImage:
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=600&fit=crop&contrast=110",
+        "https://images.unsplash.com/photo-1686518528774-31014e028eb3?q=80&w=435&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 4,
-      name: "Vintage Leather Bag",
-      price: 234,
+      name: "Black Skinny Jeans",
+      price: 70,
       image:
-        "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=500&h=600&fit=crop",
-      category: "Accessories",
-      tags: ["Best Seller"],
+        "https://images.unsplash.com/photo-1745450071522-97e3687fef4a?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "Jeans",
+      tags: [],
       hoverImage:
-        "https://images.unsplash.com/photo-1582562124811-c09040d0a901?w=500&h=600&fit=crop&sepia=20",
+        "https://images.unsplash.com/photo-1745450071522-97e3687fef4a?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 5,
-      name: "Merino Wool Sweater",
-      price: 128,
+      name: "Denim Trucker Jacket",
+      price: 110,
       image:
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=500&h=600&fit=crop",
-      category: "Knitwear",
-      tags: [],
+        "https://images.unsplash.com/photo-1612485947666-f656fe7fce32?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "Jackets",
+      tags: ["Limited Edition"],
       hoverImage:
-        "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=500&h=600&fit=crop&brightness=105",
+        "https://images.unsplash.com/photo-1612485947666-f656fe7fce32?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       id: 6,
-      name: "Flowy Summer Dress",
-      price: 98,
+      name: "Olive Bomber Jacket",
+      price: 130,
       image:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=600&fit=crop&hue=20",
-      category: "Dresses",
-      tags: ["New"],
-      hoverImage:
-        "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=500&h=600&fit=crop&hue=20&brightness=110",
-    },
-    {
-      id: 7,
-      name: "Pearl Drop Earrings",
-      price: 67,
-      image:
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=600&fit=crop&hue=30",
-      category: "Jewelry",
+        "https://images.unsplash.com/photo-1594587640199-90ad1cb30c8c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      category: "Jackets",
       tags: ["Best Seller"],
       hoverImage:
-        "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9?w=500&h=600&fit=crop&hue=30&brightness=105",
-    },
-    {
-      id: 8,
-      name: "Ceramic Vase Set",
-      price: 89,
-      image:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=500&h=600&fit=crop&hue=40",
-      category: "Home",
-      tags: ["Limited Edition"],
-      hoverImage:
-        "https://images.unsplash.com/photo-1721322800607-8c38375eef04?w=500&h=600&fit=crop&hue=40&contrast=105",
+        "https://images.unsplash.com/photo-1594587640199-90ad1cb30c8c?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 
