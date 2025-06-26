@@ -160,7 +160,7 @@ const ShopPage = () => {
 
       {/* Products Grid */}
       <section className="py-12">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-1">
           {sortedProducts.length === 0 ? (
             <div className="text-center py-16">
               <div className="text-6xl mb-4">🛍️</div>
@@ -171,12 +171,12 @@ const ShopPage = () => {
             </div>
           ) : (
             <>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
                 {sortedProducts.map((product) => (
                   <Link
                     key={product.id}
                     href={`/product/${product.id}`}
-                    className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 animate-fade-in"
+                    className="group relative bg-white rounded-sm overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 animate-fade-in"
                   >
                     <div className="aspect-[4/4] overflow-hidden relative">
                       <img
@@ -234,7 +234,7 @@ const ShopPage = () => {
                     </div>
 
                     <div className="p-4">
-                      <h3 className="font-serif font-semibold text-lg text-charcoal mb-1 group-hover:text-[var(--gold)] transition-colors">
+                      <h3 className="font-serif font-semibold text-base md:text-lg text-charcoal mb-1 group-hover:text-[var(--gold)] transition-colors">
                         {product.name}
                       </h3>
                       <p className="text-xl font-semibold text-charcoal">
