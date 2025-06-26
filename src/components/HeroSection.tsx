@@ -12,7 +12,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative h-screen flex items-start justify-center overflow-hidden">
       {/* Background Image */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -22,7 +22,7 @@ const HeroSection = () => {
       />
       
       {/* Content */}
-      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto mt-24">
         <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 animate-fade-in">
           From Instagram to Your Doorstep
         </h1>
